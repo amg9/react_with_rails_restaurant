@@ -30,7 +30,7 @@ class App extends React.Component {
   updateMenu = (id) => {
     axios.post(`/api/menus/${id}`)
       .then( res => {
-        debugger;
+        debugger; // not hitting :(
         const menus = this.state.menus.map( menu => {
         if (menu.id === id)
           return res.data;
